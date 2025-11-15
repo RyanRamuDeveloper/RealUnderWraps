@@ -12,14 +12,20 @@ I programmed this circuit to send me a text utilizing IFTT (If this then that) e
 However, utilizing IFTT wasn't sustainable as I couldn't easily access the state the device was in wether if it was moving or not, a history of the times the device was shifted, the time it was shifted, or more importantly do user authentication so I could distribute the device to my friends. As a result, I began searching for Arduino SDK's which enable me to connect to cloud infrastrucute to post data in real time to fuffill my expansive demands. Through plenty of iteration, Firebase was the easiest service to choose from and all of the hardware-based code is detailed in the UnderWrapsOfficialTriggerProtocol.ino program where you can see the ESP and Firebase connect through here:
 
 
-`
-if (Firebase.signUp(&config, &auth, "", "")) {
-    
-Serial.println("Firebase anonymous signup OK");
-    
-signupOK = true;
-}
-`
+```cpp
+// Register Device MAC in Firebase ---
+  String mac = WiFi.macAddress();
+  Serial.println("Device MAC: " + mac);
+  if (Firebase.ready() && signupOK) {
+    String path = "/Devices/" + mac;
+    Firebase.RTDB.setString(&fbdo, path, "registered");
+  }
+  Serial.println("Setup complete.");
+```
+Here the device anonomoysly signs into firebase and posts it's mac adress onto the database and looks like this 
+<img width="315" height="406" alt="circuit" src="https://github.com/user-attachments/assets/bea83e15-df96-4366-9c67-00c11bc2a7be" />
+
+Each user's device has a MAC adress which they are responsible for inputting in the app so their device be assigned to them and the device can send messages to them. Texts are sent using gmail STMP protocol. 
 
 =======
 # Welcome to your Expo app 👋
