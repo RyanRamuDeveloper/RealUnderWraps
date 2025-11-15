@@ -23,9 +23,9 @@ However, utilizing IFTT wasn't sustainable as I couldn't easily access the state
   Serial.println("Setup complete.");
 ```
 Here the device anonomoysly signs into firebase and posts it's mac adress onto the database and looks like this 
-<img width="315" height="406" alt="circuit" src="https://github.com/user-attachments/assets/bea83e15-df96-4366-9c67-00c11bc2a7be" />
+<img width="456" height="242" alt="then" src="https://github.com/user-attachments/assets/af0513b9-12e7-42d4-a721-c11d6c5207e6" />
 
-Each user's device has a MAC adress which they are responsible for inputting in the app so their device be assigned to them and the device can send messages to them. Texts are sent using gmail STMP protocol. 
+Each user's device has a MAC adress which they are responsible for inputting in the app so their device be assigned to them and the device can send messages to them. Texts are sent using gmail STMP protocol which can also be viewed in the UnderWrapsOfficialTriggerProtocol.ino but the user authentication process is showcased in.
 
 =======
 # Welcome to your Expo app 👋
