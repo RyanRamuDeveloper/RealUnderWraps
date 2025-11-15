@@ -25,7 +25,9 @@ However, utilizing IFTT wasn't sustainable as I couldn't easily access the state
 Here the device anonomoysly signs into firebase and posts it's mac adress onto the database and looks like this 
 <img width="456" height="242" alt="then" src="https://github.com/user-attachments/assets/af0513b9-12e7-42d4-a721-c11d6c5207e6" />
 
-Each user's device has a MAC adress which they are responsible for inputting in the app so their device be assigned to them and the device can send messages to them. Texts are sent using gmail STMP protocol which can also be viewed in the UnderWrapsOfficialTriggerProtocol.ino but the user authentication process is showcased in.
+Each user's device has a MAC adress which they are responsible for inputting in the app so their device be assigned to them and the device can send messages to them. Texts are sent using gmail STMP protocol which can also be viewed in the UnderWrapsOfficialTriggerProtocol.ino but the user authentication process is showcased in RealUnderWraps/blob/main/app/(tabs)/index.tsx where I put the users phone number through an API which then returns their carrier which is used to send texts.
+
+Futhermore, sending texts normally costs money due to SIM but through STMP, you can email a user with their carrier information and their carrier converts the email to a text messages but you do have to format it, here is the code I used to do it. 
 
 =======
 # Welcome to your Expo app 👋
