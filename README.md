@@ -9,7 +9,7 @@ I programmed this circuit to send me a text utilizing IFTT (If this then that) e
 
 <img width="315" height="406" alt="circuit" src="https://github.com/user-attachments/assets/2b088dde-9334-4988-89f8-ee768a030933" />
 
-However, utilizing IFTT wasn't sustainable as I couldn't easily access the state the device was in wether if it was moving or not, a history of the times the device was shifted, the time it was shifted, or more importantly do user authentication so I could distribute the device to my friends 
+However, utilizing IFTT wasn't sustainable as I couldn't easily access the state the device was in wether if it was moving or not, a history of the times the device was shifted, the time it was shifted, or more importantly do user authentication so I could distribute the device to my friends
 
 =======
 # Welcome to your Expo app 👋
